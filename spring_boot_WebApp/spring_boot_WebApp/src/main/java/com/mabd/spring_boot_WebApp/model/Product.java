@@ -1,0 +1,12 @@
+package com.mabd.spring_boot_WebApp.model;
+
+import lombok.Data;
+
+@Data
+public class Product {
+
+    private int prodId;
+    private String prodName;
+    private int price;
+
+}
