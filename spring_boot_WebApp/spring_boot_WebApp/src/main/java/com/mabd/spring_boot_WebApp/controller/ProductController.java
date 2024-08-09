@@ -1,15 +1,21 @@
 package com.mabd.spring_boot_WebApp.controller;
 
+import com.mabd.spring_boot_WebApp.model.Product;
+import com.mabd.spring_boot_WebApp.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class ProductController {
 
-    @RequestMapping("/product")
-    public String getProducts() {
+    @Autowired
+    ProductService service;
 
-
-        return "Product Page";
+    @RequestMapping("/products")
+    public List<Product> getProducts() {
+        return service.getProducts();
     }
 }

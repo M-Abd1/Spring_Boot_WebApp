@@ -11,7 +11,7 @@ public class SpringBootWebAppApplication {
 		SpringApplication.run(SpringBootWebAppApplication.class, args);
 
 
-		System.out.println("Hello World");
+
 	}
 
 
