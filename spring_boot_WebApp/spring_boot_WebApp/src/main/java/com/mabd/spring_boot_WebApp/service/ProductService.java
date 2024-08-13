@@ -35,7 +35,8 @@ public class ProductService {
                     .filter(p -> p.getProdId() == prodId)  // filters the product by id
                 .findFirst().orElse(new Product(100, "No Item Found", 0));  // fetches that product*/
 
-        return repo.findById(prodId).orElse(new Product(100, "No Item Found", 0));
+        return repo.findById(prodId)
+                .orElseGet(() -> new Product(100, "No Item Found", 0));
     }
 
     public void addProduct(Product product) {

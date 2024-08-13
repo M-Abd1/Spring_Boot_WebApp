@@ -3,7 +3,7 @@ package com.mabd.spring_boot_WebApp.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import org.springframework.stereotype.Component;
+
 
 /*@AllArgsConstructor*/
 
