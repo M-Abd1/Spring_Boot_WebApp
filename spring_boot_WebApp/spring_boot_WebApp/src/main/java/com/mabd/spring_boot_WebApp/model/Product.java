@@ -1,14 +1,26 @@
 package com.mabd.spring_boot_WebApp.model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
+
 /*@AllArgsConstructor*/
+
+@Entity
 public class Product {
 
+    @Id
     private int prodId;
     private String prodName;
     private int price;
 
 
+public Product() {
+    this.prodId = 0;
+    this.prodName = "";
+    this.price = 0;
+}
 
     public Product(int prodId, String prodName, int price) {
         this.prodId = prodId;
